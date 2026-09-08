@@ -64,4 +64,23 @@ def count_frequencies(elements):
         result[val] = result.get(val, 0) + 1
     return result
 
-print(count_frequencies(words))
+# print(count_frequencies(words))
+
+
+numbers = [1, 2, 2, 3, 4, 4, 4, 5]
+
+def remove_duplicates(data):
+    result = list(set(data))
+    return result
+
+# print(remove_duplicates(numbers))
+
+# Problem 12 of 100: The Common Interest Finder
+
+list_x = ["Python", "JavaScript", "C++", "Java"]
+list_y = ["Java", "HTML", "CSS", "Python"]
+
+def common_finder(dataa, datab):
+    return list(set(dataa).intersection(datab))
+
+print(common_finder(list_x, list_y))
