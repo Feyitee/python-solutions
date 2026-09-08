@@ -92,7 +92,7 @@ def common_finder(dataa, datab):
 def common_finder_multiple(dataa, *others):
     return list(set(dataa).intersection(*others))
 
-print(common_finder_multiple(list_x, list_y, list_z))
+# print(common_finder_multiple(list_x, list_y, list_z))
 
 
 # Problem 13 of 100: The Nested Grade FilterGoal: Filter a list of dictionaries based on a specific nested value. 
@@ -118,4 +118,18 @@ def get_passing_students(student_list, passing_grade):
             successful_students.append(student["name"])
     return successful_students
 
-print(get_passing_students(students, 75))
+# print(get_passing_students(students, 75))
+
+# Problem 14 of 100: 
+# The Price DoublerGoal: Transform a list of numbers using a list comprehension based on a condition.
+# Instructions:Write a function called double_high_prices(prices, threshold) using a single-line list 
+# comprehension inside your return statement. It should take a list of numbers (prices). 
+# If a price is greater than or equal to the threshold, 
+# double it (price * 2). If it is less than the threshold, leave it unchanged.
+
+old_prices = [5, 12, 8, 20, 3]
+
+def double_high_prices(prices, threshold):
+    return [value * 2 if value >= threshold else value for value in prices]
+
+print(double_high_prices(old_prices, 10))
