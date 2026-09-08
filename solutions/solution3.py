@@ -12,14 +12,14 @@ def get_price(stock_dict, item_name):
     else:
         return stock_dict[item_name]
 
-print(get_price(menu, "mango"))
+# print(get_price(menu, "mango"))
 
 # A better approach for getting value in a dictionary and returning error if the value doesn't exit.
 
 def geet_price(stock_dict, item_name):
     return stock_dict.get(item_name, "Item not Found")
 
-print(geet_price(menu, "banana"))
+# print(geet_price(menu, "banana"))
 
 
 # Problem 9 of 100: The Inventory UpdaterGoal: 
@@ -48,4 +48,20 @@ def updateinventory(inventory, item, quantity):
     inventory[item] = inventory.get(item, 0) + quantity
     return inventory
 
-print(updateinventory(current_stock, "yam", 2))
+# print(updateinventory(current_stock, "yam", 2))
+
+
+
+
+# Problem 10 of 100: 
+# The Frequency CounterGoal: Count how many times items appear in a list and store the results in a dictionary.
+
+words = ["apple", "banana", "apple", "cherry", "banana", "apple"]
+def count_frequencies(elements):
+    result = {}
+
+    for val in elements:
+        result[val] = result.get(val, 0) + 1
+    return result
+
+print(count_frequencies(words))

@@ -9,7 +9,7 @@ def swap_extremes(data):
     data[0], data[-1]= data[-1], data[0]
     return data
 
-print(swap_extremes(my_list))
+# print(swap_extremes(my_list))
 
 # Problem 2 of 100: The Outlier RemoverGoal: Clean up a list by removing the highest and lowest values, regardless of where they sit in the list.Instructions:Write a function called remove_outliers(data) that takes a list of numbers. It needs to find the absolute minimum value and the absolute maximum value, 
 # remove them both from the list, and return the cleaned list.(Assume all numbers in the list are unique for now).
@@ -35,7 +35,7 @@ def remove_outliers2(data):
     data.remove(lowest)
     return data
 
-print(remove_outliers2(scores))
+# print(remove_outliers2(scores))
 
 
 # Problem 3 (The Sub-list Slicer)
@@ -43,7 +43,7 @@ items = ["A", "B", "C", "D", "E", "F", "G"]
 def sub_listslicer(data):
     return data[2:5]
 
-print(sub_listslicer(items))
+# print(sub_listslicer(items))
 
 # Problem 4 of 100: The Evens CombinerGoal: Take two separate lists of numbers, 
 # combine them into one list, but only keep the even numbers.
@@ -61,7 +61,7 @@ def combine_goals(data1, data2 ):
             result.append(num)
     return result
 
-print(combine_goals(a, b))
+# print(combine_goals(a, b))
 
 # Problem 5 of 100: The Short Word FilterGoal: Filter a list of strings using a single line of code
 # (List Comprehension).Instructions:Write a function called filter_short_words(words) that takes a list of strings.
@@ -84,6 +84,6 @@ def filter_goal(data):
 def filter_goall(data):
     return [char for char in data if len(char) >= 4]
 
-print(filter_goall(my_words))
+# print(filter_goall(my_words))
 
 
