@@ -12,3 +12,12 @@ def get_user_info(data):
     return (f"User {user_name} is {age}yrs old at email {email_address}")
 
 print(get_user_info(user))
+
+
+# Let's smash Problem 7: The Tuple Concatenator next to finish up our tuple section.
+a = (4, 5)
+b = (10, 20)
+def merge_cordinators(dataa, databb):
+    return dataa + databb
+
+print(merge_cordinators(a, b))
