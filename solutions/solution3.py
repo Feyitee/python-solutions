@@ -20,3 +20,32 @@ def geet_price(stock_dict, item_name):
     return stock_dict.get(item_name, "Item not Found")
 
 print(geet_price(menu, "banana"))
+
+
+# Problem 9 of 100: The Inventory UpdaterGoal: 
+# Modify an existing dictionary by adding new key-value pairs or updating old ones
+# .Instructions: Write a function called update_inventory(inventory, item, quantity)
+# that takes an inventory dictionary, an item name, and a quantity number.
+# If the item is already in the inventory, add the new quantity to the existing count.
+# If the item is not in the inventory, add it to the dictionary with the given quantity.
+# Return the updated inventory dictionary.
+
+current_stock = {"apples": 5, "bananas": 2}
+
+def update_inventory(inventory, item, quantity):
+    if item not in inventory:
+       inventory[item] = quantity
+    else:
+        inventory[item] = inventory[item] + quantity
+    return inventory
+
+# print(update_inventory(current_stock, "bananas", 2))
+
+# Faster method
+
+# This gives us access to the key and modifies it and if the value doesn't exists, it creates it and add the quantity to it
+def updateinventory(inventory, item, quantity):
+    inventory[item] = inventory.get(item, 0) + quantity
+    return inventory
+
+print(updateinventory(current_stock, "yam", 2))
