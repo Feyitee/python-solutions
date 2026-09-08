@@ -77,10 +77,45 @@ def remove_duplicates(data):
 
 # Problem 12 of 100: The Common Interest Finder
 
-list_x = ["Python", "JavaScript", "C++", "Java"]
+list_x = ["Python", "JavaScript", "C++", "Java", "CSS"]
 list_y = ["Java", "HTML", "CSS", "Python"]
+list_z = ["C#", "CSS"]
+
 
 def common_finder(dataa, datab):
     return list(set(dataa).intersection(datab))
 
-print(common_finder(list_x, list_y))
+# print(common_finder(list_x, list_y))
+
+
+#Multiples
+def common_finder_multiple(dataa, *others):
+    return list(set(dataa).intersection(*others))
+
+print(common_finder_multiple(list_x, list_y, list_z))
+
+
+# Problem 13 of 100: The Nested Grade FilterGoal: Filter a list of dictionaries based on a specific nested value. 
+# (This is a fundamental skill for data cleaning in AI!)
+# Instructions: Write a function called get_passing_students(student_list, passing_grade) 
+# that takes a list of dictionaries
+#  (where each dictionary represents a student with a name and a score) and a cutoff grade. 
+# It should return a new list containing only the names (strings) 
+# of the students who scored equal to or higher than the passing_grade.
+
+students = [
+    {"name": "Alice", "score": 85},
+    {"name": "Bob", "score": 60},
+    {"name": "Charlie", "score": 92},
+    {"name": "David", "score": 70}
+]
+
+def get_passing_students(student_list, passing_grade):
+    successful_students = []
+
+    for student in student_list:
+        if student["score"] >= passing_grade:
+            successful_students.append(student["name"])
+    return successful_students
+
+print(get_passing_students(students, 75))
