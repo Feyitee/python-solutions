@@ -21,3 +21,4 @@ def merge_cordinators(dataa, databb):
     return dataa + databb
 
 print(merge_cordinators(a, b))
+
