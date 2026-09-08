@@ -85,3 +85,13 @@ def filter_goall(data):
     return [char for char in data if len(char) >= 4]
 
 print(filter_goall(my_words))
+
+
+user = (101, "Alice", "alice@example.com", 28)
+def get_user_info(data):
+    age = data[-1]
+    user_name = data[1]
+    email_address = data[2]
+    return (f"User {user_name} is {age}yrs old at email {email_address}")
+
+print(get_user_info(user))
