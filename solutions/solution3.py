@@ -132,4 +132,6 @@ old_prices = [5, 12, 8, 20, 3]
 def double_high_prices(prices, threshold):
     return [value * 2 if value >= threshold else value for value in prices]
 
-print(double_high_prices(old_prices, 10))
+# print(double_high_prices(old_prices, 10))
+
+
