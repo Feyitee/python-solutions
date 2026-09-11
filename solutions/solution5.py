@@ -1,8 +1,6 @@
 # Problem 19
 
 # Modify a list permanently by changing every negative number into a 0.
-
-
 my_numbers = [4, -2, 7, -1, 9, -5]
 
 def replace_negatives(data):
@@ -11,7 +9,7 @@ def replace_negatives(data):
             data[i] = 0
     return data
 
-print(replace_negatives(my_numbers))
+# print(replace_negatives(my_numbers))
 
 # Problem 20
 letters = ["A", "B", "C", "D", "E", "F"]
@@ -23,7 +21,7 @@ def get_even_index(data):
         result.append(data[i])
     return result
 
-print(get_even_index(letters))
+# print(get_even_index(letters))
 
 # Problem 21
 # Write a function called running_sum(data) that modifies a list of numbers.
@@ -31,7 +29,6 @@ print(get_even_index(letters))
 # from the start of the list up to that position.
 
 nums = [1, 2, 3, 4]
-
 
 def running_sum(data):
     result = []
@@ -43,7 +40,7 @@ def running_sum(data):
 
     return result
 
-print(running_sum(nums))
+# print(running_sum(nums))
 
 #Problem 22
 # Write a function called extract_column(matrix, col_index) 
@@ -63,7 +60,7 @@ def extract_column(matrix, col_index):
     return result
 
 
-print(extract_column(grid, 0))
+# print(extract_column(grid, 0))
 
 # Problem 23
 # Instructions:Write a function called merge_and_sum(dict1, dict2) that merges two dictionaries containing item counts. 
@@ -89,7 +86,7 @@ nums = [2, 4, 8, 1, 3, 9, 6]
 def transform_alternating_elements(data):
     return[ data[i] * 10 if data[i] > 5 else data[i] for i in range(0, len(data), 2) ]
  
-print(transform_alternating_elements(nums))
+# print(transform_alternating_elements(nums))
 
 
 prices = [5, 12, 8, 20]
@@ -98,7 +95,7 @@ def map_high_values(prices):
    return {f"index_{i}": value * 2 if value > 10 else value for i, value in enumerate(prices)}
 
 
-print(map_high_values(prices))
+# print(map_high_values(prices))
 
 # Problem 25
 # Instructions:Write a function called track_votes(votes_list) that takes a list of names (strings) representing votes.
@@ -116,7 +113,7 @@ def track_votes(votes_list):
 
     return result
  
-print(track_votes(ballot))
+# print(track_votes(ballot))
 
 # Problem 27
 # Instructions:Write a function called build_roster(player_data) that takes a list of tuples: (team_name, player_name). 
@@ -131,11 +128,10 @@ players = [
 ]
 
 # // Setdefault says if key doesn't exist, create one, if it does, append to its value to it
-
 def build_roster(player_data):
     result = {}
 
     for key, value in player_data:
         result.setdefault(key, []).append(value)
-
+# For Tuple you can access the key and value without having to do enumerate or .items()
     return result
