@@ -40,8 +40,62 @@ def running_sum(data):
     for i in data:     
         total += i
         result.append(total)
-        
+
+    return result
+
+print(running_sum(nums))
+
+#Problem 22
+# Write a function called extract_column(matrix, col_index) 
+# that takes a 2D list (a list of lists) and a column index number. 
+# It should extract the numbers sitting at that specific
+# column position from every row and return them as a flat list.
+
+grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+
+def extract_column(matrix, col_index):
+    result = []
+
+    for box in matrix:
+        result.append(box[col_index])
+
     return result
 
 
-print(running_sum(nums))
+print(extract_column(grid, 0))
+
+# Problem 23
+# Instructions:Write a function called merge_and_sum(dict1, dict2) that merges two dictionaries containing item counts. 
+# If an item exists in both dictionaries, do not overwrite it—instead, add their values together.
+# If an item only exists in one dictionary, include it in the final result as-is.
+
+store_a = {"apples": 10, "bananas": 5, "oranges": 8}
+store_b = {"bananas": 3, "oranges": 2, "grapes": 15}
+
+
+def merge_and_sum(dict1, dict2):
+   result = dict1.copy()
+   for key, value in dict2.items():
+    if key in result:
+         result[key] = result.get(key,0) + value
+    else:
+        result[key] = value 
+        return result
+
+print(merge_and_sum(store_a, store_b))
+
+nums = [2, 4, 8, 1, 3, 9, 6]
+def transform_alternating_elements(data):
+    return[ data[i] * 10 if data[i] > 5 else data[i] for i in range(0, len(data), 2) ]
+ 
+print(transform_alternating_elements(nums))
+
+
+prices = [5, 12, 8, 20]
+
+def map_high_values(prices):
+   return {f"index_{i}": value * 2 if value > 10 else value for i, value in enumerate(prices)}
+
+
+print(map_high_values(prices))
