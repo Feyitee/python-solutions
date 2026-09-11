@@ -115,5 +115,27 @@ def track_votes(votes_list):
             result[value] = 1
 
     return result
-
+ 
 print(track_votes(ballot))
+
+# Problem 27
+# Instructions:Write a function called build_roster(player_data) that takes a list of tuples: (team_name, player_name). 
+# It should return a dictionary where the keys are the teams, and the values are a list of player names on that team.
+# Constraint: You must use the .setdefault(key, []) pattern inside a traditional loop.
+
+players = [
+    ("Lions", "Alex"),
+    ("Tigers", "Ben"),
+    ("Lions", "Chris"),
+    ("Tigers", "David")
+]
+
+# // Setdefault says if key doesn't exist, create one, if it does, append to its value to it
+
+def build_roster(player_data):
+    result = {}
+
+    for key, value in player_data:
+        result.setdefault(key, []).append(value)
+
+    return result
