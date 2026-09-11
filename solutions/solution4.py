@@ -66,10 +66,9 @@ def group_by_category(items):
 
     return result
        
-print(group_by_category(products))
+# print(group_by_category(products))
 
 # Logic two
-
 def group_by_cat(items):
     result = {}
 
@@ -77,4 +76,45 @@ def group_by_cat(items):
         result.setdefault(products["category"], []).append(products["name"])
     return result
 
-print(group_by_cat(products))
+# print(group_by_cat(products))
+
+
+
+ledger = [
+    {"category": "Food", "amount": 15},
+    {"category": "Transport", "amount": 10},
+    {"category": "Food", "amount": 25},
+    {"category": "Utilities", "amount": 50},
+    {"category": "Transport", "amount": 5}
+]
+
+def calculate_expenses(transactions):
+    result = {}
+    for products in transactions:
+        cat = products["category"]
+        amount = products["amount"]
+
+        result[cat] = result.get(cat, 0) + amount
+    return result
+
+print(calculate_expenses(ledger))
+
+# Goal: Find indices of numbers that add up to a target value. (This is a simplified version of "Two Sum", the most famous 
+# technical interview question [2]!)
+# Instructions:Write a function called find_target_pair(numbers, target) that loops through a list of numbers
+#  and returns a tuple containing the indices (positions) of the first two numbers that add up exactly to the target.
+ 
+my_nums = [2, 7, 11, 15]
+
+def find_target_pair(numbers, target):
+    # 'i' is an index pointer that walks through every position (0, 1, 2, 3...)
+    for i in range(len(numbers)):
+        
+        # 'j' is a second pointer that walks through the positions AFTER 'i'
+        for j in range(i + 1, len(numbers)):
+            
+            # Check if the values at position i and position j add up to the target
+            if numbers[i] + numbers[j] == target:
+                return (i, j) # Return their positions as a tuple!
+
+print(find_target_pair(my_nums, 9))

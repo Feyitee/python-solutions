@@ -22,3 +22,6 @@ def merge_cordinators(dataa, databb):
 
 # print(merge_cordinators(a, b))
 
+# Problem 19
+
+# Modify a list permanently by changing every negative number into a 0.
