@@ -99,3 +99,21 @@ def map_high_values(prices):
 
 
 print(map_high_values(prices))
+
+# Problem 25
+# Instructions:Write a function called track_votes(votes_list) that takes a list of names (strings) representing votes.
+# It should return a dictionary with the total vote counts for each candidate.
+
+ballot = ["Alice", "Bob", "Alice", "Charlie", "Bob", "Alice"]
+
+def track_votes(votes_list):
+    result = {}
+    for value in votes_list:
+        if value in result:
+            result[value] = result.get(value, 0) + 1
+        else:
+            result[value] = 1
+
+    return result
+
+print(track_votes(ballot))
