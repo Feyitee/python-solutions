@@ -233,8 +233,8 @@ def two_sum(numbers, target):
         needed = target - value
 
         if needed in seen:
-            return [seen[needed], i]
+            return [seen[value], i]
 
         seen[value] = i
-
+    
 print(two_sum(numbers, 15))
