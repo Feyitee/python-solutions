@@ -34,7 +34,7 @@ def sanitize_usernames(raw_users):
 
     return[clean_word for clean_word in result if result[clean_word] == 1]
 
-print(sanitize_usernames(dirty_users))
+# print(sanitize_usernames(dirty_users))
 
 # Problem 30   
 # Write a function called aggregate_expensive_items(item_list, price_cutoff)
@@ -180,4 +180,42 @@ def summarize_large_sales(sales_list, minimum_amount):
 
     return result
 
-print(summarize_large_sales(sales, 100))
+# print(summarize_large_sales(sales, 100))
+
+# numbers = [4, 7, 2, 9, 7, 5, 2]
+
+def first_duplicate(number):
+    seen = set()
+
+    for value in number:
+        if value in seen:
+            return value
+        else:
+            seen.add(value)
+
+# print(first_duplicate(numbers))
+
+# Problem 37 — DSA Pattern: Frequency Map
+
+# numbers = [4, 7, 2, 7, 4, 7, 9]
+def most_frequent(numbers):
+    frequent = {}
+
+    for value in numbers:
+        frequent[value] = frequent.get(value, 0) + 1
+
+    return max(frequent, key= frequent.get)
+# print(most_frequent(numbers))
+
+numbers = [4, 7, 2, 7, 4, 9, 2, 5]
+def first_unique(numbers):
+    result = {}
+
+    for value in numbers:
+        result[value] = result.get(value, 0) + 1
+
+    for value in numbers:
+        if result[value] == 1:
+            return value
+
+print(first_unique(numbers))
