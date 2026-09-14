@@ -219,3 +219,22 @@ def first_unique(numbers):
             return value
 
 print(first_unique(numbers))
+
+
+# Problem 39 — Two Sum
+
+numbers = [8, 2, 15, 7, 5, 2]
+target = 15
+
+def two_sum(numbers, target):
+    seen = {}
+
+    for i, value in enumerate(numbers):
+        needed = target - value
+
+        if needed in seen:
+            return [seen[needed], i]
+
+        seen[value] = i
+
+print(two_sum(numbers, 15))
