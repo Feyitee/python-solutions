@@ -242,9 +242,6 @@ def two_sum(numbers, target):
 
 # Problem 40 — DSA Pattern: Two Pointers
 
-numbers = [1, 2, 4, 6, 8, 10]
-target = 10
-
 def pair_sum_sorted(numbers, target):
    seen = []
 
@@ -256,4 +253,26 @@ def pair_sum_sorted(numbers, target):
 
        seen.append(value)
 
-print(pair_sum_sorted(numbers, 10))
+# print(pair_sum_sorted(numbers, 10))
+
+
+# Problem 41 - Sorted List, Find Pairs
+numbers = [1, 2, 4, 6, 8, 10]
+target = 10
+def pair_sorted(numbers, target):
+    left = 0
+    right = len(numbers) -1
+
+    while left < right:
+        current_number = numbers[left] + numbers[right]
+
+        if current_number == target:
+            return [numbers[left], numbers[right]]
+
+        if current_number > target:
+            right -= 1
+        else:
+            left += 1
+
+    
+print(pair_sorted(numbers, 10))
