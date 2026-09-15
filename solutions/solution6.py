@@ -218,7 +218,7 @@ def first_unique(numbers):
         if result[value] == 1:
             return value
 
-print(first_unique(numbers))
+# print(first_unique(numbers))
 
 
 # Problem 39 — Two Sum
@@ -237,4 +237,23 @@ def two_sum(numbers, target):
 
         seen[value] = i
     
-print(two_sum(numbers, 15))
+# print(two_sum(numbers, 15))
+
+
+# Problem 40 — DSA Pattern: Two Pointers
+
+numbers = [1, 2, 4, 6, 8, 10]
+target = 10
+
+def pair_sum_sorted(numbers, target):
+   seen = []
+
+   for value in numbers:
+       needed = target - value
+
+       if needed in seen:
+           return [needed, value]
+
+       seen.append(value)
+
+print(pair_sum_sorted(numbers, 10))
