@@ -275,20 +275,43 @@ def pair_sorted(numbers, target):
             left += 1
 
     
-print(pair_sorted(numbers, 10))
+# print(pair_sorted(numbers, 10))
 
 
 # Problem 41 — Sliding Window
 
 numbers = [2, 1, 5, 1, 3, 2]
 
-def max_sum_subarray(numbers, k):
-    window_sum = sum(numbers[:k])
-    highest = window_sum
+def max_substring(numbers, k):
+   window_sum = sum(numbers[:k])
+   highest = window_sum
 
-    for value in range(k, len(numbers)):
-        window_sum = window_sum - numbers[value - k] + numbers[value]
+   for i in range(k, len(numbers)):
+       window_sum = window_sum - numbers[i - k] + numbers[i]
+
+       if window_sum > highest:
+           highest = window_sum
+           return highest
+
+print(max_substring(numbers, 3))
+
+
+numbers = [4, 2, 1, 7, 8, 1, 2, 8]
+k = 3
+def max_average(numbers, k):
+    window_sum = sum(numbers[:k])
+    window_average = window_sum / k
+    highest = window_average
+
+    for i in range(k, len(numbers)):
+        window_sum = window_sum - numbers[i - k] + numbers[i]
+        window_average = window_sum / k
+
+
+        if window_average > highest:
+            highest = window_average
 
     return highest
 
-print(max_sum_subarray(numbers, 4))
+print(max_average(numbers, 3))
+  
