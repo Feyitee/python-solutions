@@ -275,7 +275,7 @@ def pair_sorted(numbers, target):
             left += 1
 
     
-# print(pair_sorted(numbers, 10))
+print(pair_sorted(numbers, 10))
 
 
 # Problem 41 — Sliding Window
@@ -297,11 +297,11 @@ print(max_substring(numbers, 3))
 
 
 numbers = [4, 2, 1, 7, 8, 1, 2, 8]
-k = 3
+
 def max_average(numbers, k):
     window_sum = sum(numbers[:k])
     window_average = window_sum / k
-    highest = window_average
+    highest  = window_average
 
     for i in range(k, len(numbers)):
         window_sum = window_sum - numbers[i - k] + numbers[i]
@@ -314,4 +314,22 @@ def max_average(numbers, k):
     return highest
 
 print(max_average(numbers, 3))
-  
+
+
+
+# 1. Grow the window from the right
+# 2. Once sum >= target
+# 3. Shrink from the left
+# 4. Keep the smallest valid length
+
+def smallest_subarray_length(numbers, target):
+    left = 0
+    total = 0
+
+    for i, value in enumerate(numbers):
+        total = total + value
+
+        while total > target:
+            
+
+
