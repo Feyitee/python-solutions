@@ -276,3 +276,19 @@ def pair_sorted(numbers, target):
 
     
 print(pair_sorted(numbers, 10))
+
+
+# Problem 41 — Sliding Window
+
+numbers = [2, 1, 5, 1, 3, 2]
+
+def max_sum_subarray(numbers, k):
+    window_sum = sum(numbers[:k])
+    highest = window_sum
+
+    for value in range(k, len(numbers)):
+        window_sum = window_sum - numbers[value - k] + numbers[value]
+
+    return highest
+
+print(max_sum_subarray(numbers, 4))
