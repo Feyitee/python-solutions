@@ -49,3 +49,13 @@ class Animal:
 
 class Dog(Animal):
     pass
+
+# Overriding
+
+class Animal:
+    def speak(self):
+        return "Some sound"
+
+class Dogg(Animal):
+    def speak(self):
+        return "Woof"
