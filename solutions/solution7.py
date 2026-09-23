@@ -33,6 +33,19 @@ class Student:
         self.name = name
         self.age = age
 
+    def introduce(self):
+        return f"My name is {self.name} ad I am {self.age} years old"
+
         
 michael = Student("Michael", 25)
 sarah = Student("Sarah", 15)
+
+# Each objeck keeps its own data but from the same class
+# Inheritance means one class can reuse what another class already knows
+
+class Animal:
+    def speak(self):
+        return "Some sound"
+
+class Dog(Animal):
+    pass
