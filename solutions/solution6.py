@@ -323,13 +323,6 @@ print(max_average(numbers, 3))
 # 4. Keep the smallest valid length
 
 def smallest_subarray_length(numbers, target):
-    left = 0
-    total = 0
-
-    for i, value in enumerate(numbers):
-        total = total + value
-
-        while total > target:
-            
+    
 
 
